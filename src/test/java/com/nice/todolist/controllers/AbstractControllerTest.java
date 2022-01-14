@@ -7,6 +7,7 @@ package com.nice.todolist.controllers;
 
 import java.util.Properties;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.MessageSource;
@@ -29,7 +30,11 @@ import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 public class AbstractControllerTest {
 
 	protected MockMvc mockMvc;
-	
+
+    @Test
+    public void contextLoads() {
+    }
+
 	protected void setUp(BaseController controller) {
 		mockMvc = MockMvcBuilders.standaloneSetup(controller)
 								 .setHandlerExceptionResolvers(exceptionResolver())
